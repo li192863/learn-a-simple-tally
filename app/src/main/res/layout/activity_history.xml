@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.HistoryActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <!-- 返回按钮 -->
+        <ImageView
+            android:id="@+id/history_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:onClick="onClick"
+            android:src="@mipmap/it_back" />
+        <!-- 页面标题 -->
+        <TextView
+            android:id="@+id/history_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/history"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <!-- 日历按钮 -->
+        <ImageView
+            android:id="@+id/history_iv_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/it_rili"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:onClick="onClick"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 日期 -->
+        <TextView
+            android:id="@+id/history_tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="0000年00月"
+            android:layout_alignParentStart="true"/>
+        <!-- 本月账单记录 -->
+        <TextView
+            android:id="@+id/history_tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/history_info"
+            android:textColor="@color/green_006400"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <!-- 账单记录 -->
+    <ListView
+        android:id="@+id/history_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:divider="@color/grey_f3f3f3"
+        android:dividerHeight="6dp"/>
+
+</LinearLayout>

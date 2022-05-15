@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey_f3f3f3">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <!-- 关闭按钮 -->
+        <ImageView
+            android:id="@+id/record_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ih_error"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"/>
+        <!-- 页面切换指示器 -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/record_tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            app:tabGravity="center"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/grey_7d7d7d"
+            app:tabSelectedTextColor="@color/black"
+            app:tabIndicatorColor="@color/black"/>
+        <!-- 保存按钮 -->
+        <ImageView
+            android:id="@+id/record_iv_save"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/save"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"/>
+    </RelativeLayout>
+    <!-- 页面 -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/record_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

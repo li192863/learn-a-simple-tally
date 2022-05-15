@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_f3f3f3">
+    <!-- 其他/金额 -->
+    <RelativeLayout
+        android:id="@+id/frag_record_rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+        <!-- 其他图标 -->
+        <ImageView
+            android:id="@+id/frag_record_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_qita_fs"/>
+        <!-- 其他文字 -->
+        <TextView
+            android:id="@+id/frag_record_tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_type"
+            android:layout_toEndOf="@id/frag_record_iv"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
+        <!-- 输入金额 -->
+        <EditText
+            android:id="@+id/frag_record_et_money"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_money"
+            android:gravity="end"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:inputType="numberDecimal"
+            android:background="@color/white"/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/frag_record_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/frag_record_rl_top"
+        android:background="@color/grey_f3f3f3"/>
+
+    <!-- 条目 -->
+
+    <!-- 键盘 -->
+    <GridView
+        android:id="@+id/frag_record_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frag_record_rl_top"
+        android:layout_marginTop="0dp"
+        android:background="@color/white"
+        android:numColumns="5"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/frag_record_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keyBackground="@color/grey_f3f3f3"
+        android:keyTextColor="@color/black"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingTop="1dp"
+        android:layout_alignParentBottom="true"
+        android:shadowColor="@color/white"
+        android:shadowRadius="0.0"/>
+    <!-- 备注/日期 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_above="@id/frag_record_keyboard">
+        <!-- 日期 -->
+        <TextView
+            android:id="@+id/frag_record_tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/frag_record_tv_time"
+            android:padding="10dp"
+            android:text="0000年00月00日" />
+        <!-- 时间 -->
+        <TextView
+            android:id="@+id/frag_record_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"/>
+        <!-- 备注 -->
+        <TextView
+            android:id="@+id/frag_record_tv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/frag_record_tv_date"
+            android:hint="@string/add_comment"
+            android:padding="10dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
